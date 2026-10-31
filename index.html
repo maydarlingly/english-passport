@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>English Passport — диагностика уровня английского</title>
-  <meta name="description" content="Бесплатная адаптивная диагностика уровня английского: грамматика, лексика, чтение и аудирование. Результат сразу и подробный PDF для учителя.">
+  <title>English Passport — грамматика, практика и тест уровня английского</title>
+  <meta name="description" content="Бесплатная платформа английского: 145 тем грамматики с интерактивными объяснениями, 14 500 упражнений, домашние задания с ключами и адаптивный тест уровня.">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/site.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='10' y='4' width='44' height='56' rx='6' fill='%231f2a44'/%3E%3Ccircle cx='32' cy='28' r='11' fill='none' stroke='%23d6a756' stroke-width='3'/%3E%3Crect x='20' y='46' width='24' height='3' rx='1.5' fill='%23d6a756'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -210,14 +211,26 @@
   </div>
 
   <header class="topbar">
-    <a class="brand" href="./" aria-label="English Passport — на главную">
+    <a class="brand" href="#/" aria-label="English Passport — на главную">
       <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="4" width="44" height="56" rx="6" fill="#1f2a44"/><circle cx="32" cy="28" r="11" fill="none" stroke="#d6a756" stroke-width="3"/><path d="M21 28h22M32 17c4 4 4 18 0 22M32 17c-4 4-4 18 0 22" stroke="#d6a756" stroke-width="2" fill="none"/><rect x="20" y="46" width="24" height="3" rx="1.5" fill="#d6a756"/></svg>
       <span>English Passport</span>
     </a>
-    <span class="topbar-note">Бесплатно · без регистрации</span>
+    <nav class="nav" id="nav" aria-label="Разделы сайта">
+      <a href="#/" data-nav="home">Главная</a>
+      <a href="#/grammar" data-nav="grammar">Грамматика</a>
+      <a href="#/test" data-nav="test">Тест уровня</a>
+    </nav>
+    <div class="search-wrap" role="search">
+      <svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="global-search" type="search" placeholder="Найти тему грамматики…" autocomplete="off" aria-label="Поиск по темам грамматики" aria-controls="search-results">
+      <div id="search-results" class="search-results" role="listbox" hidden></div>
+    </div>
   </header>
 
   <main id="app">
+    <section id="page-home" class="page" aria-label="Главная" hidden></section>
+
+    <section id="page-test" class="page" aria-label="Тест уровня" hidden>
     
     <section id="screen-start" class="screen" aria-labelledby="start-title">
       <div class="start-grid">
@@ -319,6 +332,10 @@
 
     
     <section id="screen-result" class="screen" hidden aria-label="Результат"></section>
+    </section>
+
+    <section id="page-grammar" class="page" aria-label="Грамматика" hidden></section>
+    <section id="page-unit" class="page" aria-label="Тема грамматики" hidden></section>
   </main>
 
 
@@ -341,6 +358,7 @@
 
   <script src="vendor/pdfmake.min.js" defer></script>
   <script src="vendor/vfs_fonts.js" defer></script>
+  <script src="vendor/fflate.min.js" defer></script>
   <script src="js/app.min.js" defer></script>
 </body>
 </html>
