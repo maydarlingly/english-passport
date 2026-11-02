@@ -385,6 +385,7 @@ select.tgap { cursor: pointer; }
 .hw-sec h4 { margin: 16px 0 4px; color: var(--navy); font-family: var(--serif); font-size: 1.05rem; }
 .hw-instr { margin: 0 0 6px; color: var(--muted); font-style: italic; font-size: .88rem; }
 .hw-sec ol { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+.hw-sec li.hw-plain { list-style: none; margin-left: -22px; line-height: 1.6; }
 .hw-opts { margin-top: 2px; color: #333; }
 .hw-lines span { display: block; height: 22px; border-bottom: 1px solid #c9c2b2; }
 .hw-key { font-weight: 700; display: block; }
