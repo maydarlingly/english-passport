@@ -359,3 +359,16 @@ h1 { font-size: clamp(1.8rem, 4.2vw, 2.6rem); margin: 0 0 12px; }
   .backdrop, .topbar, .result-actions, .result-cta { display: none; }
   body { background: #fff; }
 }
+
+/* Аудирование: ход записи, кто говорит, вопросы заранее */
+.audio-info { flex: 1; min-width: 180px; }
+.audio-progress { height: 5px; border-radius: 3px; background: #e6d8ec; margin-top: 8px; overflow: hidden; }
+.audio-progress i { display: block; height: 100%; width: 0; background: #6b2f7d; transition: width .4s ease; }
+.speakers { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.speaker { font-size: .78rem; padding: 3px 10px; border-radius: 999px; background: #efe5f3; color: #6b2f7d; transition: background .2s, color .2s, transform .2s; }
+.speaker.on { background: #6b2f7d; color: #fff; transform: scale(1.06); }
+.q-preview { background: #fff; border: 1px dashed #d7c2df; border-radius: 12px; padding: 10px 14px; margin: -6px 0 14px; font-size: .88rem; color: var(--muted); }
+.q-preview ol { margin: 6px 0 0; padding-left: 20px; color: var(--ink, #1d2433); }
+.q-preview li { margin: 2px 0; }
+.q-preview li.cur { font-weight: 600; color: #6b2f7d; }
+.q-preview li.done { opacity: .55; }
