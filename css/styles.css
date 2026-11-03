@@ -33,6 +33,8 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
 }
+/* страница двигается только вверх-вниз: без сдвига вбок и без «резинки» трекпада */
+html, body { overflow-x: hidden; overflow-x: clip; overscroll-behavior-x: none; max-width: 100%; }
 [hidden] { display: none !important; }
 button, input, textarea { font: inherit; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
@@ -301,7 +303,7 @@ h1 { font-size: clamp(1.8rem, 4.2vw, 2.6rem); margin: 0 0 12px; }
 
 /* ---------- достопримечательности внизу ---------- */
 .landmarks { position: absolute; left: 0; right: 0; bottom: 0; height: clamp(130px, 24vw, 30vh); }
-.landmarks svg { display: block; width: 100%; height: 100%; }
+.landmarks svg { display: block; width: 100%; height: 100%; overflow: visible; }
 .copyright { position: absolute; left: 0; right: 0; bottom: 4px; margin: 0; text-align: center; font-size: .72rem; color: #5a5040; }
 .eagle { animation: eagleFly 26s linear infinite; }
 .eagle-bob { animation: eagleBob 3.2s ease-in-out infinite; }
