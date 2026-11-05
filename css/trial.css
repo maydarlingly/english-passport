@@ -113,6 +113,8 @@ body.trial-on .page { animation: none; transform: none; } /* иначе аним
 .chip { padding: 11px 18px; border-radius: 4px; border: 2px solid rgba(253, 248, 234, .75); background: rgba(20, 35, 63, .35); color: #FDF8EA; font: 600 22px var(--sans); cursor: pointer; }
 .chip.on { background: #FDF8EA; color: var(--us-navy); }
 .fin-ok { margin: 0; font-family: var(--serif); font-size: 36px; color: #FDF8EA; }
+.b.fin-home { margin-top: 18px; text-decoration: none; background: rgba(20, 35, 63, .82); border-color: #FDF8EA; color: #FDF8EA; }
+.b.fin-home:hover { background: var(--us-navy); color: #fff; }
 
 /* ---------- план урока, о преподавателе ---------- */
 .agenda { list-style: none; margin: 22px 0 0; padding: 0; }
